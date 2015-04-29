@@ -9,7 +9,7 @@ Android ViewOpeningController is the last fast implementation of View started of
 ## Sample App
 [Download it on Github](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/view-opening-controller-1.0.0.apk)
 
-![download.jpg](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/download.jpg)
+![download.jpg](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/download.png)
 
 ##Usage Guide
 ###Step1 导入
