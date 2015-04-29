@@ -1,0 +1,25 @@
+<resources>
+    <!-- Compat theme. -->
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
+    <!-- Compat theme. -->
+    <style name="CompatTheme" parent="BaseTheme">
+
+    </style>
+
+
+    <style name="AppTheme" parent="CompatTheme">
+
+    </style>
+
+    <style name="RootLayout">
+
+    </style>
+
+    <style name="ContentLayout">
+
+    </style>
+
+</resources>
