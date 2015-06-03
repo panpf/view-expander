@@ -29,7 +29,9 @@ dependencies{
 ```
 
 **离线模式（Offline work）**
-点击下载[viewopeningcontroller-1.0.0.aar](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/viewopeningcontroller-1.0.0.aar)，并放到你module的libs目录下
+
+点击下载[viewopeningcontroller-1.0.0.aar](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/viewopeningcontroller-1.0.0.aar)并放到你module的libs目录下
+
 然后在你module的build.gradle文件中添加以下代码：
 ```groovy
 repositories{
