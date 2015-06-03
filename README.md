@@ -7,18 +7,31 @@ Android ViewOpeningController is the last fast implementation of View started of
 ![sample.gif](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/sample.gif)
 
 ## Sample App
-[Download it on Github](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/view-opening-controller-1.0.0.apk)
+[Download it on Github](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/sample-1.0.0.apk)
 
 ![download.jpg](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/download.png)
 
 ##Usage Guide
-###Step1 导入
-####Using Eclipse
-点击下载 [view-opening-controller-1.0.0.jar](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/view-opening-controller-1.0.0.jar) ，下载后放到libs目录下即可
+####1. 导入ViewOpeningController（Import ViewOpeningController to your project）
 
-####Using Android Studio
-点击下载 [view-opening-controller-1.0.0.aar](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/view-opening-controller-1.0.0.aar) ，下载后放到libs目录下，然后在build.gradle中添加以下代码
-```java
+#####使用Eclipse（Use Eclipse）
+1. 首先点击下载[viewopeningcontroller-1.0.0.aar](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/viewopeningcontroller-1.0.0.aar)并改后缀名为zip
+2. 然后解压并将classes.jar文件重命名为viewopeningcontroller-1.0.0.jar
+3. 最后将viewopeningcontroller-1.0.0.jar拷贝到你的项目的libs目录下
+
+#####使用Gradle（Use Gradle）
+**从JCenter仓库导入（From jcenter import ）**
+
+```groovy
+dependencies{
+	compile 'me.xiaopan:viewopeningcontroller:1.0.0'
+}
+```
+
+**离线模式（Offline work）**
+点击下载[viewopeningcontroller-1.0.0.aar](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/viewopeningcontroller-1.0.0.aar)，并放到你module的libs目录下
+然后在你module的build.gradle文件中添加以下代码：
+```groovy
 repositories{
     flatDir(){
         dirs 'libs'
@@ -26,14 +39,22 @@ repositories{
 }
 
 dependencies{
-	compile(name:'view-opening-controller-1.0.0', ext:'aar')
+    compile(name:'viewopeningcontroller-1.0.0', ext:'aar')
 }
 ```
 最后同步一下Gradle即可
 
-其实ViewOpeningController只有一个class文件，所以你也可以直接下载jar文件放到libs目录下，然后同步Gradle即可
+#####使用Maven（Use Maven）
+```xml
+<dependency>
+	<groupId>me.xiaopan</groupId>
+	<artifactId>viewopeningcontroller</artifactId>
+	<version>1.0.0</version>
+	<type>aar</type>
+</dependency>
+```
 
-###Step2 使用
+###2. 使用
 在Adapter中使用
 在数据对象User中保存展开状态
 ```java

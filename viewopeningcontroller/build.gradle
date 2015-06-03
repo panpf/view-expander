@@ -1,16 +1,16 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 22
     buildToolsVersion "22.0.0"
 
     defaultConfig {
-        applicationId "me.xiaopan.voc.sample"
         minSdkVersion 7
         targetSdkVersion 22
         versionCode 100
         versionName "1.0.0"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -19,7 +19,4 @@ android {
     }
 }
 
-dependencies {
-    compile 'com.android.support:appcompat-v7:22.1.1'
-    compile project(':library')
-}
+apply from: "bintrayUpload.gradle"
