@@ -46,16 +46,6 @@ dependencies{
 ```
 最后同步一下Gradle即可
 
-#####使用Maven（Use Maven）
-```xml
-<dependency>
-	<groupId>me.xiaopan</groupId>
-	<artifactId>viewopeningcontroller</artifactId>
-	<version>1.0.0</version>
-	<type>aar</type>
-</dependency>
-```
-
 ###2. 使用
 在Adapter中使用
 在数据对象User中保存展开状态
