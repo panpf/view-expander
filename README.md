@@ -14,11 +14,6 @@ Android ViewOpeningController is the last fast implementation of View started of
 ##Usage Guide
 ####1. 导入ViewOpeningController（Import ViewOpeningController to your project）
 
-#####使用Eclipse（Use Eclipse）
-1. 首先点击下载[viewopeningcontroller-1.0.0.aar](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/viewopeningcontroller-1.0.0.aar)并改后缀名为zip
-2. 然后解压并将classes.jar文件重命名为viewopeningcontroller-1.0.0.jar
-3. 最后将viewopeningcontroller-1.0.0.jar拷贝到你的项目的libs目录下
-
 #####使用Gradle（Use Gradle）
 ``从JCenter仓库导入（Import from jcenter）``
 
@@ -47,7 +42,9 @@ dependencies{
 最后同步一下Gradle即可
 
 #####使用Eclipse（Use Eclipse）
-请自行下载源码集成
+1. 首先点击下载[viewopeningcontroller-1.0.0.aar](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/viewopeningcontroller-1.0.0.aar)并改后缀名为zip
+2. 然后解压并将classes.jar文件重命名为viewopeningcontroller-1.0.0.jar
+3. 最后将viewopeningcontroller-1.0.0.jar拷贝到你的项目的libs目录下
 
 ####2. 配置最低版本（Configure min sdk version）
 ViewOpeningController最低兼容API v7
