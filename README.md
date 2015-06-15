@@ -4,12 +4,12 @@ ViewOpeningController是Android上一个快速实现View展开关闭效果的库
 
 Android ViewOpeningController is the last fast implementation of View started off effect of the library, very easy to use
 
-![sample.gif](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/sample.gif)
+![sample.gif](docs/sample.gif)
 
 ## Sample App
-[Download it on Github](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/sample-1.0.0.apk)
+[Download it on Github](https://github.com/xiaopansky/ViewOpeningController/raw/master/docs/sample.apk)
 
-![download.jpg](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/download.png)
+![download](docs/qr_download.png)
 
 ##Usage Guide
 ####1. 导入ViewOpeningController（Import ViewOpeningController to your project）
@@ -20,7 +20,7 @@ Android ViewOpeningController is the last fast implementation of View started of
 3. 最后将viewopeningcontroller-1.0.0.jar拷贝到你的项目的libs目录下
 
 #####使用Gradle（Use Gradle）
-**从JCenter仓库导入（From jcenter import ）**
+``从JCenter仓库导入（Import from jcenter）``
 
 ```groovy
 dependencies{
@@ -28,7 +28,7 @@ dependencies{
 }
 ```
 
-**离线模式（Offline work）**
+``离线模式（Offline work）``
 
 点击下载[viewopeningcontroller-1.0.0.aar](https://github.com/xiaopansky/ViewOpeningController/raw/master/releases/viewopeningcontroller-1.0.0.aar)并放到你module的libs目录下
 
@@ -46,7 +46,39 @@ dependencies{
 ```
 最后同步一下Gradle即可
 
-###2. 使用
+#####使用Eclipse（Use Eclipse）
+请自行下载源码集成
+
+####2. 配置最低版本（Configure min sdk version）
+ViewOpeningController最低兼容API v7
+
+#####使用Gradle（Use Gradle）
+在app/build.gradle文件文件中配置最低版本为7
+```groovy
+android {
+	...
+
+    defaultConfig {
+        minSdkVersion 7
+        ...
+    }
+}
+```
+
+#####使用Eclipse（Use Eclipse）
+在AndroidManifest.xml文件中配置最低版本为7
+```xml
+<manifest
+	...
+	>
+    <uses-sdk android:minSdkVersion="7"/>
+    <application>
+    ...
+    </application>
+</manifest>
+```
+
+###3. 使用
 在Adapter中使用
 在数据对象User中保存展开状态
 ```java
