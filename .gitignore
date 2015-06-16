@@ -33,3 +33,5 @@ build/
 # coustom files
 change log.txt
 to-do list.txt
+
+*.jks
