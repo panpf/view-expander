@@ -44,7 +44,7 @@ dependencies{
 #####使用Eclipse（Use Eclipse）
 1. 首先到[releases](https://github.com/xiaopansky/ViewOpeningController/releases)页面下载最新版的aar包（`这里以viewopeningcontroller-1.0.0.aar为例，具体请以你下载到的文件名称为准`）
 2. 然后改后缀名为zip并解压
-2. 将classes.jar文件重命名为viewopeningcontroller-1.0.0.jar
+2. 接下来将classes.jar文件重命名为viewopeningcontroller-1.0.0.jar
 3. 最后将viewopeningcontroller-1.0.0.jar拷贝到你的项目的libs目录下
 
 ####2. 配置最低版本（Configure min sdk version）
