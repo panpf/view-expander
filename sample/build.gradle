@@ -12,30 +12,30 @@ def signatureKeyPassword = properties.getProperty("signature.keyPassword");
 
 android {
     compileSdkVersion 22
-    buildToolsVersion "22.0.0"
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "me.xiaopan.voc.sample"
         minSdkVersion 7
         targetSdkVersion 22
-        versionCode 100
-        versionName "1.0.0"
+        versionCode 110
+        versionName "1.1.0"
     }
 
     signingConfigs{
-        release{
-            storeFile file(signatureStoreFile)
-            storePassword signatureStorePassword
-            keyAlias signatureKeyAlias
-            keyPassword signatureKeyPassword
-        }
+//        release{
+//            storeFile file(signatureStoreFile)
+//            storePassword signatureStorePassword
+//            keyAlias signatureKeyAlias
+//            keyPassword signatureKeyPassword
+//        }
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-            signingConfig signingConfigs.release
+//            signingConfig signingConfigs.release
         }
     }
 

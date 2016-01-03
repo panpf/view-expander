@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Peng fei Pan <sky@xiaopan.me>
+ * Copyright (C) 2015 Peng fei Pan <sky@xiaopan.me>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ import android.view.animation.Animation.AnimationListener;
  * <br>
  * <br>ViewOpeningController可用于任何地方，特别是ListView中
  * @author pan peng fei
- * @version 1.0.0
+ * @version 1.1.0
  */
 public abstract class ViewOpeningController implements AnimationListener{
 	private View view;
@@ -54,8 +54,9 @@ public abstract class ViewOpeningController implements AnimationListener{
 	/**
 	 * 测量View在不同状态下的高度，并初始化View的状态
 	 * @param opened 当前状态
+	 * @return false：展开和折叠时高度是一样的，不需要再使用ViewOpeningController
 	 */
-	public void measureViewHeightAndInit(boolean opened){
+	public boolean measureViewHeightAndInit(boolean opened){
 		// 要先将高度设置为wrap_content，要不然测量高度就不准确了
 		LayoutParams layoutParams = view.getLayoutParams();
 		layoutParams.height = LayoutParams.WRAP_CONTENT;
@@ -82,13 +83,15 @@ public abstract class ViewOpeningController implements AnimationListener{
 					);
 			maxHeight = view.getMeasuredHeight();
 		}else{
-			minHeight = 0;
+			maxHeight = 0;
 		}
 		
 		// 初始化状态以及高度
 		setViewStatus(opened);
 		layoutParams.height = opened?maxHeight:minHeight;
 		view.setLayoutParams(layoutParams);
+
+		return minHeight != maxHeight;
 	}
 	
 	/**
