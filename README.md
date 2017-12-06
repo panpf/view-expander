@@ -22,7 +22,7 @@ dependencies{
 
 请自行替换 `$lastVersionName` 为最新的版本：[![Release Version][release_version_image]][release_version-link] `（不要v）`
 
-最低支持 `Android2.3`
+最低支持 `Android 2.3`
 
 ### 2. 在 Adapter 中使用
 
@@ -32,7 +32,7 @@ dependencies{
 public class User {
     ...
     private boolean expended;
-	...
+    ...
     public boolean isExpended() {
         return opened;
     }
@@ -68,8 +68,8 @@ public View getView(int position, View convertView, ViewGroup parent) {
         viewHolder.openAreaView = convertView.findViewById(R.id.layout_userItem_openArea);
         convertView.setTag(viewHolder);
 
-		// 创建 ViewExpander，并指定要展开关闭的 View
-		// 你还需要实现其 setViewStatus(boolean) 方法，根据 opened 参数修改你要展开关闭的 View
+	// 创建 ViewExpander，并指定要展开关闭的 View
+	// 你还需要实现其 setViewStatus(boolean) 方法，根据 opened 参数修改你要展开关闭的 View
         viewHolder.viewExpander = new ViewExpander(viewHolder.openAreaView) {
             @Override
             public void setViewStatus(boolean expanded) {
@@ -78,7 +78,7 @@ public View getView(int position, View convertView, ViewGroup parent) {
             }
         };
 
-		// 监听 convertView 的点击事件，调用 viewExpander.opening(boolean) 方法展开或关闭
+	// 监听 convertView 的点击事件，调用 viewExpander.opening(boolean) 方法展开或关闭
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,8 +94,8 @@ public View getView(int position, View convertView, ViewGroup parent) {
     User user = userList.get(position);
     ...
 
-	// 重置 viewExpander 的状态
-	viewHolder.viewExpander.measureViewHeightAndInit(user.isExpended());
+    // 重置 viewExpander 的状态
+    viewHolder.viewExpander.measureViewHeightAndInit(user.isExpended());
     viewHolder.user = user;
 
     return convertView;
