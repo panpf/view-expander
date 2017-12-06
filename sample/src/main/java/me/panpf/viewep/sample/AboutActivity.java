@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Peng fei Pan <sky@xiaopan.me>
+ * Copyright (C) 2017 Peng fei Pan <sky@panpf.me>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package me.xiaopan.voc.sample;
+package me.panpf.viewep.sample;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

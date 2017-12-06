@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Peng fei Pan <sky@xiaopan.me>
+ * Copyright (C) 2017 Peng fei Pan <sky@panpf.me>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package me.xiaopan.voc.sample;
+package me.panpf.viewep.sample;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -27,13 +27,13 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import me.xiaopan.voc.ViewOpeningController;
+import me.panpf.viewep.ViewExpander;
 
 public class UserAdapter extends BaseAdapter{
     private Context context;
     private List<User> userList;
 
-    public UserAdapter(Context context, List<User> userList) {
+    UserAdapter(Context context, List<User> userList) {
         this.context = context;
         this.userList = userList;
     }
@@ -86,11 +86,11 @@ public class UserAdapter extends BaseAdapter{
                 }
             });
 
-            viewHolder.openingController = new ViewOpeningController(viewHolder.openAreaView) {
+            viewHolder.viewExpander = new ViewExpander(viewHolder.openAreaView) {
                 @Override
-                public void setViewStatus(boolean opened) {
-                    viewHolder.openAreaView.setVisibility(opened?View.VISIBLE:View.GONE);
-                    viewHolder.openStatusImageView.setImageResource(opened?R.drawable.ic_arrow_up:R.drawable.ic_arrow_down);
+                public void setViewStatus(boolean expanded) {
+                    viewHolder.openAreaView.setVisibility(expanded ?View.VISIBLE:View.GONE);
+                    viewHolder.openStatusImageView.setImageResource(expanded ? R.drawable.ic_arrow_up: R.drawable.ic_arrow_down);
                 }
             };
             convertView.setOnClickListener(new View.OnClickListener() {
@@ -99,7 +99,7 @@ public class UserAdapter extends BaseAdapter{
                     ViewHolder viewHolder1 = (ViewHolder) v.getTag();
                     User user = viewHolder1.user;
                     user.setOpened(!user.isOpened());
-                    viewHolder1.openingController.opening(user.isOpened());
+                    viewHolder1.viewExpander.expand(user.isOpened());
                 }
             });
         }
@@ -108,7 +108,7 @@ public class UserAdapter extends BaseAdapter{
         User user = userList.get(position);
         viewHolder.nameTextView.setText(user.getName());
         viewHolder.phoneTextView.setText(user.getPhone());
-        viewHolder.openingController.measureViewHeightAndInit(user.isOpened());
+        viewHolder.viewExpander.measureViewHeightAndInit(user.isOpened());
         viewHolder.user = user;
 
         return convertView;
@@ -122,7 +122,7 @@ public class UserAdapter extends BaseAdapter{
         private View callButton;
         private View messageButton;
         private View editButton;
-        private ViewOpeningController openingController;
+        private ViewExpander viewExpander;
         private User user;
     }
 }

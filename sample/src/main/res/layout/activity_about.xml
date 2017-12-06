@@ -23,6 +23,6 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:autoLink="all"
-            android:text="ViewOpeningController是用来快速实现展开或关闭View的\n\nWebSite: http://github.com/xiaopansky/ViewOpeningController"/>
+            android:text="ViewExpander 用来快速实现展开或关闭 View\n\nWebSite: https://github.com/panpf/view-expander"/>
     </ScrollView>
 </LinearLayout>

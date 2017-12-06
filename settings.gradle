@@ -1,1 +1,1 @@
-include ':sample', ':viewopeningcontroller'
+include ':sample', ':view-expander'
