@@ -2,7 +2,7 @@
 
 ![Platform][platform_image]
 [![API][min_api_image]][min_api_link]
-[![Release Version][release_version_image]][release_version-link]
+[![Release Version][version_icon]][version_link]
 
 ViewExpander 用来快速实现 View 展开关闭效果，使用非常简单，适用于所有的 View
 
@@ -10,17 +10,17 @@ ViewExpander 用来快速实现 View 展开关闭效果，使用非常简单，�
 
 ## 开始使用
 
-### 1. 导入 ViewExpander
+### 1. 从 mavenCentral 导入 ViewExpander
 
 在 app 的 build.gradle 文件的 dependencies 节点中加入依赖
 
-```groovy
+```kotlin
 dependencies{
-	implementation 'me.panpf:view-expander:$lastVersionName'
+	implementation("io.github.panpf.viewexpander:viewexpander:${LAST_VERSION}")
 }
 ```
 
-请自行替换 `$lastVersionName` 为最新的版本：[![Release Version][release_version_image]][release_version-link] `（不要v）`
+`${LAST_VERSION}`: [![Download][version_icon]][version_link] (No include 'v')
 
 最低支持 `Android 2.3`
 
@@ -128,5 +128,5 @@ public View getView(int position, View convertView, ViewGroup parent) {
 [platform_image]: https://img.shields.io/badge/Platform-Android-brightgreen.svg
 [min_api_image]: https://img.shields.io/badge/API-10%2B-orange.svg
 [min_api_link]: https://android-arsenal.com/api?level=10
-[release_version_image]: https://img.shields.io/github/release/panpf/view-expander.svg
-[release_version-link]: https://github.com/panpf/view-expander/releases
+[version_icon]: https://img.shields.io/maven-central/v/io.github.panpf.viewexpander/viewexpander
+[version_link]: https://repo1.maven.org/maven2/io/github/panpf/viewexpander/
